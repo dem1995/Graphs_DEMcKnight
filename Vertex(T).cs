@@ -11,16 +11,8 @@ namespace Graphs_DEMcKnight
     /// <typeparam name="T">The type of object that this edge will hold</typeparam>
     public class Vertex<T> : INotifyPropertyChanged
     {
-        private T _data;
-        private List<Edge<T>> _edges;
-
-        /// <summary>
-        /// The default constructor for <see cref="Vertex{T}"/>. Instantiates an empty <see cref="List{Edge{T}}"/> for <see cref="_edges"/>.
-        /// </summary>
-        public Vertex()
-        {
-            _edges = new List<Edge<T>>();
-        }
+        private T _data = default(T);
+        private List<Edge<T>> _edges = new List<Edge<T>>();
 
         /// <summary>
         /// The <see cref="T"/> attached to this <see cref="Vertex{T}"/>.

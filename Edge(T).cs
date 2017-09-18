@@ -13,11 +13,6 @@ namespace Graphs_DEMcKnight
         private Vertex<T> _v2;
 
         /// <summary>
-        /// The default constructor for this Edge. Does nothing.
-        /// </summary>
-        public Edge() { }
-
-        /// <summary>
         /// The first vertex this edge is attached to.
         /// </summary>
         public Vertex<T> V1
@@ -26,9 +21,8 @@ namespace Graphs_DEMcKnight
             set
             {
                 _v1 = value;
-                NotifyPropertyChanged();
                 value.AddEdge(this);
-                
+                NotifyPropertyChanged();
             }
         }
 
@@ -135,7 +129,7 @@ namespace Graphs_DEMcKnight
         /// <returns></returns>
         public bool HasEndpoint(Vertex<T> vertex)
         {
-            if (V1.Equals(vertex) || V2.Equals(vertex))
+            if (V1==(vertex) || V2==(vertex))
                 return true;
             return false;
         }
